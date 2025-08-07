@@ -1,24 +1,33 @@
+# 🚀 crud-api-v2
 
-### 📄 `README.md`
+> A minimal, secure, and fully portable CRUD API for **DevSecOps demos** — built with Flask, deployed via Docker & k3s (Multipass VM).  
+> Features in-memory storage, Prometheus metrics, health probes, and a one-command CI/CD deployment script.
 
-markdown
+---
 
-CopyEdit
+## 🧰 Tech Stack
 
-``# crud-api 🛠️ A minimal, secure, and fully portable CRUD API built for DevSecOps demos.  
-Works without a database, using in-memory storage. Deployed via Docker and k3s inside a Multipass VM.
+- **Python Flask** – REST API
+- **Prometheus Client** – Metrics endpoint
+- **Docker** – Containerized app
+- **Kubernetes (k3s)** – Lightweight k8s inside Multipass VM
+- **Shell CI (ci.sh)** – Local build, deploy, and port-forward
+- **No Database Required** – In-memory key-value store
 
---- ## �� Tech Stack  - Python Flask - Prometheus client for `/metrics`  - Docker - Kubernetes (k3s via Multipass) - Port-forwarding to host for local testing
+---
 
---- ## 📁 Project Structure`` 
+## 📁 Folder Structure
 
-crud-api/  
-├── app.py # Flask app with full CRUD and metrics  
-├── Dockerfile  
-├── requirements.txt  
-├── ci.sh # Build + deploy + port-forward  
-└── k8s/  
-├── deployment.yaml  
+```bash
+crud-api-v2/
+├── app.py                 # Flask app with CRUD logic
+├── Dockerfile             # Python 3.10-slim image
+├── requirements.txt       # Flask, Prometheus client
+├── ci.sh                  # One-command CI/CD
+├── k8s/
+│   ├── deployment.yaml    # K8s Deployment manifest
+│   └── service.yaml       # K8s Service manifest
+└── README.md              # You're here!
 └── service.yaml
 
 yaml
