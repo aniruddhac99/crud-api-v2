@@ -61,8 +61,6 @@ This script will:
 
 All `POST`, `PUT`, and `DELETE` requests require a header:
 
-
-
 `X-Key: demo123` 
 
 ----------
@@ -71,43 +69,25 @@ All `POST`, `PUT`, and `DELETE` requests require a header:
 
 ### Create a note
 
-
-
 `curl -X POST -H "X-Key: demo123" -H "Content-Type: application/json" \
 -d '{"note_id":"n1", "text":"Initial note"}' \
 http://localhost:8081/notes` 
 
 ### Get all notes
 
-bash
-
-CopyEdit
-
 `curl http://localhost:8081/notes` 
 
 ### Get a single note
 
-bash
-
-CopyEdit
-
 `curl http://localhost:8081/notes/n1` 
 
 ### Update a note
-
-bash
-
-CopyEdit
 
 `curl -X PUT -H "X-Key: demo123" -H "Content-Type: application/json" \
 -d '{"text":"Updated content"}' \
 http://localhost:8081/notes/n1` 
 
 ### Delete a note
-
-bash
-
-CopyEdit
 
 `curl -X DELETE -H "X-Key: demo123" http://localhost:8081/notes/n1` 
 
@@ -132,27 +112,27 @@ Use Case
 
 Rename Route to
 
-Note Fields Become...
+Note Fields will be:
 
-Secrets Manager
+Secrets Manager:
 
 `/secrets`
 
 `secret_id`, `value`
 
-Task Tracker
+Task/Assignment Tracker:
 
 `/tasks`
 
 `task_id`, `description`
 
-Config Store
+Config Store:
 
 `/configs`
 
 `config_key`, `config_val`
 
-Policy Store
+Policy Store:
 
 `/policies`
 
@@ -163,10 +143,6 @@ Policy Store
 ## 🧼 Cleanup
 
 To delete the app:
-
-bash
-
-CopyEdit
 
 `kubectl delete deployment crud-api
 kubectl delete svc crud-api` 
