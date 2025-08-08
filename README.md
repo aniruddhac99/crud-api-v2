@@ -30,11 +30,12 @@ crud-api-v2/
 └── README.md              # You're here!
 └── service.yaml
 
-yaml
+```
 
-CopyEdit
 
- `--- ## 🚀 Setup Instructions (Inside Ubuntu Multipass VM)  ### Step 1: Shell into your devvm  ```bash  multipass  shell  devvm` 
+
+
+ ## 🚀 Setup Instructions (Inside Ubuntu Multipass VM)  ### Step 1: Shell into your devvm  ```bash  multipass  shell  devvm` 
 
 ### Step 2: Build and deploy
 
